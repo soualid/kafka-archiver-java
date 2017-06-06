@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<configuration scan="true">
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>utf-8</charset>
+            <Pattern>%d{HH:mm:ss.SSS} | [%p] %c | %m%n</Pattern>
+        </encoder>
+    </appender>
+
+	<root level="TRACE">
+		<appender-ref ref="CONSOLE"/>
+	</root>
+
+
+    <logger name="fr.artestudio.edutheque" level="ERROR"/>
+    <!-- 
+    <logger name="fr.artestudio.edutheque.service.crm.EZDRMService" level="DEBUG"/>
+    <logger name="fr.artestudio.edutheque.web.controllers.AccountController" level="DEBUG"/>
+    <logger name="org.eclipse.jetty.nosql.kvs.KeyValueStoreSessionIdManager" level="DEBUG"/>
+     <logger name="com.github.danielwegener" level="TRACE" />
+     -->
+    <logger name="javax.activation" level="WARN"/>
+    <logger name="javax.mail" level="WARN"/>
+    <logger name="javax.xml.bind" level="WARN"/>
+<!-- 
+    <logger name="ch.qos.logback" level="INFO"/>
+ -->    
+    <logger name="com.zaxxer" level="WARN"/>
+    <logger name="org.apache" level="WARN"/>
+    <logger name="org.apache.catalina.startup.DigesterFactory" level="OFF"/>
+    <logger name="org.bson" level="WARN"/>
+    <logger name="org.hibernate.validator" level="WARN"/>
+    <logger name="org.hibernate" level="WARN"/>
+    <logger name="org.hibernate.ejb.HibernatePersistenceProvider" level="OFF"/>
+    <logger name="org.hibernate.SQL" level="OFF" />
+    <logger name="org.hibernate.type" level="OFF"/>
+    <logger name="org.springframework" level="WARN"/>
+    <logger name="org.springframework.web" level="WARN"/>
+    <logger name="org.springframework.security" level="WARN"/>
+    <logger name="org.springframework.cache" level="WARN"/>
+    <logger name="org.thymeleaf" level="WARN"/>
+
+<!-- 
+    <logger name="org.eclipse.jetty" level="INFO"/>
+    
+    <logger name="org.eclipse.jetty.server.Server" level="INFO"/>
+    <logger name="org.eclipse.jetty.server.handler" level="INFO"/>
+    <logger name="org.eclipse.jetty.server.session" level="INFO"/>
+ -->
+    <!-- 
+    <logger name="org.eclipse.jetty.nosql.kvs" level="DEBUG"/>
+    <logger name="org.eclipse.jetty.server.session" level="DEBUG"/>
+     -->
+
+    <logger name="jndi" level="WARN"/>
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+
+</configuration>
